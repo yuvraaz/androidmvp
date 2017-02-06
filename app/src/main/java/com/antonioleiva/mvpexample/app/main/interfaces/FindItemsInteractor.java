@@ -16,17 +16,15 @@
  *
  */
 
-package com.antonioleiva.mvpexample.app.main;
+package com.antonioleiva.mvpexample.app.main.interfaces;
 
 import java.util.List;
 
-public interface MainView {
+public interface FindItemsInteractor {
 
-    void showProgress();
+    interface OnFinishedListener {
+        void onFinished(List<String> items);
+    }
 
-    void hideProgress();
-
-    void setItems(List<String> items);
-
-    void showMessage(String message);
+    void findItems(OnFinishedListener listener);
 }

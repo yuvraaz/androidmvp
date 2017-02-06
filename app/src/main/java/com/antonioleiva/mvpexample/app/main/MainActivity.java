@@ -19,6 +19,7 @@
 package com.antonioleiva.mvpexample.app.main;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,9 +28,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.antonioleiva.mvpexample.app.R;
+import com.antonioleiva.mvpexample.app.main.interfaces.MainPresenter;
+import com.antonioleiva.mvpexample.app.main.interfaces.MainView;
+import com.antonioleiva.mvpexample.app.main.posts.PostsListActivity;
 
 import java.util.List;
 
@@ -37,7 +40,11 @@ public class MainActivity extends Activity implements MainView, AdapterView.OnIt
 
     private ListView listView;
     private ProgressBar progressBar;
-    private MainPresenter presenter;
+
+    private MainPresenter presenter;//interace
+//    private MainView mainview;//interace
+
+
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +52,8 @@ public class MainActivity extends Activity implements MainView, AdapterView.OnIt
         listView = (ListView) findViewById(R.id.list);
         listView.setOnItemClickListener(this);
         progressBar = (ProgressBar) findViewById(R.id.progress);
+
+
         presenter = new MainPresenterImpl(this, new FindItemsInteractorImpl());
     }
 
@@ -87,7 +96,8 @@ public class MainActivity extends Activity implements MainView, AdapterView.OnIt
     }
 
     @Override public void showMessage(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+
+        startActivity(new Intent(this, PostsListActivity.class));
     }
 
     @Override public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

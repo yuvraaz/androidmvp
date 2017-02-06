@@ -25,6 +25,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 
+import com.antonioleiva.mvpexample.app.Login.interfaces.LoginPresenter;
+import com.antonioleiva.mvpexample.app.Login.interfaces.LoginView;
 import com.antonioleiva.mvpexample.app.R;
 import com.antonioleiva.mvpexample.app.main.MainActivity;
 

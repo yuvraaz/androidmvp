@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/sample_layout">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/baseline_jpeg"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            fresco:fadeDuration="300"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@color/wait_color"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:failureImage="@drawable/error"
+            fresco:failureImageScaleType="centerInside"
+            fresco:retryImage="@drawable/ic_action_accept"
+            fresco:retryImageScaleType="centerCrop"
+            fresco:progressBarImage="@drawable/ic_action_accept"
+            fresco:progressBarImageScaleType="centerInside"
+            fresco:progressBarAutoRotateInterval="1000"
+            fresco:backgroundImage="@color/blue"
+
+            fresco:pressedStateOverlayImage="@color/red"
+            fresco:roundAsCircle="false"
+            fresco:roundedCornerRadius="1dp"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="false"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="true"
+            fresco:roundWithOverlayColor="@color/corner_color"
+            fresco:roundingBorderWidth="2dp"
+            fresco:roundingBorderColor="@color/border_color" />
+        <!--<com.facebook.drawee.view.SimpleDraweeView-->
+            <!--android:id="@+id/baseline_jpeg"-->
+            <!--style="@style/drawee" />-->
+        <!--
+            fresco:overlayImage="@drawable/overlay"
+-->
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/post_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/post_body"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp" />
+</LinearLayout>

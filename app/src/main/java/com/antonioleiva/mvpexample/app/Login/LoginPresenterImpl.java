@@ -18,6 +18,10 @@
 
 package com.antonioleiva.mvpexample.app.Login;
 
+import com.antonioleiva.mvpexample.app.Login.interfaces.LoginInteractor;
+import com.antonioleiva.mvpexample.app.Login.interfaces.LoginPresenter;
+import com.antonioleiva.mvpexample.app.Login.interfaces.LoginView;
+
 public class LoginPresenterImpl implements LoginPresenter, LoginInteractor.OnLoginFinishedListener {
 
     private LoginView loginView;

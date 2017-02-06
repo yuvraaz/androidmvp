@@ -20,6 +20,8 @@ package com.antonioleiva.mvpexample.app.main;
 
 import android.os.Handler;
 
+import com.antonioleiva.mvpexample.app.main.interfaces.FindItemsInteractor;
+
 import java.util.Arrays;
 import java.util.List;
 

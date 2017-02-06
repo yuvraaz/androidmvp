@@ -16,7 +16,7 @@
  *
  */
 
-package com.antonioleiva.mvpexample.app.main;
+package com.antonioleiva.mvpexample.app.main.interfaces;
 
 public interface MainPresenter {
 

@@ -16,10 +16,9 @@
  *
  */
 
-package com.antonioleiva.mvpexample.app.Login;
+package com.antonioleiva.mvpexample.app.Login.interfaces;
 
 public interface LoginPresenter {
     void validateCredentials(String username, String password);
-
     void onDestroy();
 }
